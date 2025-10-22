@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!-- lang="vi" cho biết rằng ngôn ngữ chính của trang web là tiếng Việt -->
+<html lang="vi">
+<!-- Thẻ <head> là phần đầu của trang web, phần không hiển thị trực tiếp trên trang web, chứa thông tin cấu hình và thiết lập: tiêu đề, bộ mã ký tự, liên kết CSS, script,... -->
+<head>
+    <!-- cho biết bảng mã ký tự mà trang web sử dụng là UTF-8, mà UTF-8 cho phép hiển thị đúng các ký tự tiếng Việt, tránh bị lỗi khi ghi chữ cái, dấu câu,...-->
+    <meta charset="UTF-8">
+    <!-- cho biết sẽ hiển thị tương thích với loại thiết bị đang dùng (điện thoại, ipad, laptop,...) với phóng to ban đầu là 1.0 (=100%) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- đây là tiêu đề của trang web, xuất hiện ở tab trình duyệt => CV-->
+    <title>CV</title>
+    <!-- Liên kết file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Thẻ <body> là thẻ cha, chứa toàn bộ nội dung hiển thị trên trang web như văn bản, hình ảnh, liên kết, bảng,... -->
+<body>
+    <!-- Thẻ <main> trong HTML5 được thiết kế để bao bọc nội dung chính (dominant content) -->
+    <!-- Thẻ <main> có class là "cv-container", nghĩa là phần khung chính chứa toàn bộ nội dung của CV -->
+    <!-- class="cv-container" đặt tên lớp CSS là cv-container, giúp bạn dễ định dạng (CSS) hoặc quản lý bố cục -->
+    <main class="cv-container">
+        <!-- Thẻ <section> được dùng để nhóm nội dung theo chủ đề (thematic grouping), đại diện cho một phần nội dung độc lập, có ý nghĩa riêng biệt -->
+        <!-- Thẻ <section> có class là "cot-trai", nghĩa là phần nằm bên trái của khung CV, dùng để nhóm các thông tin cá nhân lại với nhau -->
+        <section class="cot-trai">
+
+            <!-- Thẻ <div> là thẻ khối (block), dùng để nhóm các phần tử liên quan lại với nhau, giúp dễ dàng định dạng và bố trí nội dung hơn -->
+            <!-- Dùng thẻ <div> ở đây để bao thẻ <img> lại, giúp dễ định dạng và căn chỉnh hình ảnh hơn -->
+            <div class="khu-vuc-anh">
+                <!-- Thẻ <img> được dùng để chèn hình ảnh (ảnh đại diện) vào trang HTML -->
+                <!-- Thuộc tính src là đường dẫn đến ảnh; alt là phần mô tả hiển thị khi ảnh không tải được -->
+                <img src="anh.jpg" alt="Ảnh đại diện" class="anh-dai-dien">
+            </div>
+
+            
+            <!-- Thẻ <div> này chứa tiêu đề và danh sách thông tin liên hệ -->
+             <div class="khu-vuc-lien-lac">
+                <!-- Thẻ <h2> là thẻ tiêu đề cấp 2 (chỉ nhỏ hơn <h1>), phân cấp nội dung, thường dùng để đặt tiêu đề cho các phần nội dung chính hoặc mục lớn trong trang -->
+                <!-- Ở đây, tiêu đề là "LIÊN LẠC" – giúp người xem dễ nhận biết phần thông tin liên hệ trong CV -->
+                <h2 class="tieu-de-lien-lac">LIÊN LẠC</h2>
+                <!-- Thẻ <hr> được dùng để tạo một đường kẻ ngang, giúp phân tách các phần nội dung trên trang, giúp bố cục trang rõ ràng, thẩm mỹ và dễ đọc hơn-->
+                <!-- Thẻ <hr> có class là "duong-ke", được dùng để tạo đường kẻ ngang nằm phía dưới nội dung "LIÊN LẠC"-->
+                <hr class="duong-ke">
+
+                <!-- Thẻ <div> có class là "muc-lien-lac", được dùng để nhóm các thông tin trong mục liên lạc lại với nhau, giúp dễ dàng định dạng và bố trí bằng CSS -->
+                <div class="muc-lien-lac">
+                    <!-- Thẻ <span> là thẻ nội tuyến (inline), dùng để nhóm hoặc bao các phần tử nhỏ nằm trong cùng một dòng văn bản. Thẻ <span> không tự xuống dòng và thường được dùng để định dạng hoặc tô màu, làm nổi bật một đoạn chữ, ký tự hoặc từ cụ thể bằng CSS -->
+                    <!-- Thẻ <span> có class là "icon", dùng để chứa biểu tượng (icon) của thông tin liên hệ, dễ định dạng hoặc căn chỉnh icon bằng CSS mà không ảnh hưởng đến phần chữ bên cạnh -->
+                    <!-- Ký tự &#9742; là một mã ký tự đặc biệt, biểu thị biểu tượng hình điện thoại bàn-->
+                    <span class="icon">&#9742;</span> 
+                    <!-- Thẻ <span> có class là "thong-tin", dùng để chứa nội dung văn bản của thông tin liên hệ — ở đây là số điện thoại -->
+                    <span class="thong-tin">0856000000</span>
+                </div>
+
+                
+                <div class="muc-lien-lac">
+                    <!-- Ký tự &#9993; là một mã ký tự đặc biệt, biểu thị biểu tượng hình phong bì/mail-->
+                    <span class="icon">&#9993;</span> 
+                     <!-- Thẻ <span> có class là "thong-tin", dùng để chứa nội dung văn bản của thông tin liên hệ — ở đây là email -->
+                    <span class="thong-tin">elraintien711@gmail.com</span>
+                </div>
+
+                
+                <div class="muc-lien-lac">
+                    <!-- Ký tự &#128197; là một mã ký tự đặc biệt, biểu thị biểu tượng lịch-->
+                    <span class="icon">&#128197;</span> 
+                    <!-- Thẻ <span> có class là "thong-tin", dùng để chứa nội dung văn bản của thông tin liên hệ — ở đây là ngày tháng năm sinh -->
+                    <span class="thong-tin">13/02/2006</span>
+                </div>
+
+                
+                <div class="muc-lien-lac">
+                    <!-- Ký tự &#128205; là một mã ký tự đặc biệt, biểu thị biểu tượng ghim vị trí-->
+                    <span class="icon">&#128205;</span> 
+                    <!-- Thẻ <span> có class là "thong-tin", dùng để chứa nội dung văn bản của thông tin liên hệ — ở đây là địa chỉ -->
+                    <span class="thong-tin">Nguyễn Thị Minh Khai, Thương Châu, Ngũ Phụng, Phú Quý, Bình Thuận</span>
+                </div>
+            </div>
+
+            <!-- Thẻ <div> có class là "khu-vuc-hoc-van", được dùng để nhóm các thông tin học vấn lại với nhau, giúp dễ dàng định dạng và bố trí bằng CSS -->
+                <div class="khu-vuc-hoc-van">
+                    <!-- Ở đây, tiêu đề lớn là "HỌC VẤN" – giúp người xem dễ nhận biết phần thông tin học vấn trong CV -->  
+                    <h2 class="tieu-de-khoi">HỌC VẤN</h2>
+                    <!-- Thẻ <hr> có class là "duong-ke-khoi", được dùng để tạo đường kẻ ngang nằm phía dưới nội dung "HỌC VẤN"-->
+                    <hr class="duong-ke-khoi">
+
+                    <!-- Thẻ <div> có class là "muc-hoc-van", được dùng để nhóm các thông tin trong mục học vấn lại với nhau, giúp dễ dàng định dạng và bố trí bằng CSS --> 
+                    <div class="muc-hoc-van">
+                        <!-- Thẻ <p> là thẻ đoạn văn, được dùng để hiển thị một khối văn bản, sẽ tự động xuống dòng và tạo khoảng cách trước và sau đoạn, giúp nội dung dễ đọc hơn -->
+                        <!-- Trong trường hợp này, <p> có class là "thoi-gian" và chứa nội dung "2021–2024", thể hiện mốc thời gian học tại trường cấp 3. -->
+                        <p class="thoi-gian">2021-2024</p>
+                        
+                        <!-- Trong trường hợp này, <p> có class là "ten-truong" và chứa nội dung "Trường THPT Ngô Quyền", thể hiện tên trường cấp 3 -->
+                        <!-- Bên trong <p> có thẻ <strong>, dùng để nhấn mạnh (in đậm) phần văn bản quan trọng — ở đây là "Trường THPT Ngô Quyền". Trình duyệt hiểu rằng đây là nội dung có mức độ quan trọng cao hơn so với văn bản thông thường. -->
+                        <p class="ten-truong"><strong>Trường THPT Ngô Quyền</strong></p>
+                        <!-- Thẻ <ul> có class là "chi-tiet-hv", được dùng để tạo một danh sách không có thứ tự (unordered list), thường hiển thị các dấu chấm đầu dòng (•) trước mỗi mục. Thẻ <ul> này nhóm các thông tin chi tiết về học vấn lại với nhau -->
+                        <ul class="chi-tiet-hv">
+                            <!-- Thẻ <li> là phần tử con của <ul>, đại diện cho một mục trong danh sách. Ở đây, <li> chứa nội dung "Giỏi", thể hiện xếp loại học tập. -->
+                            <li>Giỏi</li>
+                        </ul>
+                    </div>
+
+                    <div class="muc-hoc-van">
+                        <!-- Trong trường hợp này, thẻ <p> có class là "thoi-gian" và chứa nội dung "2024-2028", thể hiện mốc thời gian học tại trường đại học -->
+                        <p class="thoi-gian">2024-2028</p>
+                        <!-- Trong trường hợp này, thẻ <p> có class là "ten-truong" và chứa nội dung "Trường đại học Công Nghệ Thông Tin - UIT", thể hiện tên trường đại học -->
+                        <!-- Bên trong <p> có thẻ <strong>, dùng để nhấn mạnh (in đậm) phần văn bản quan trọng — ở đây là "Trường đại học Công Nghệ Thông Tin - UIT". Trình duyệt hiểu rằng đây là nội dung có mức độ quan trọng cao hơn so với văn bản thông thường. -->
+                        <p class="ten-truong"><strong>Trường đại học Công Nghệ Thông Tin - UIT</strong></p>
+                        <ul class="chi-tiet-hv">
+                            <!-- Thẻ <li> là phần tử con của <ul>, đại diện cho một mục trong danh sách. Ở đây, <li> chứa nội dung "Computer Science", thể hiện xếp loại ngành học -->
+                            <li>Computer Science</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Thẻ <div> có class là "khu-vuc-ky-nang", được dùng để nhóm các thông tin kỹ năng lại với nhau, giúp dễ dàng định dạng và bố trí bằng CSS -->
+                <div class="khu-vuc-ky-nang">
+                    <!-- Ở đây, tiêu đề lớn là "NGOẠI NGỮ" – giúp người xem dễ nhận biết phần thông tin ngoại ngữ trong CV -->  
+                    <h2 class="tieu-de-khoi">NGOẠI NGỮ</h2>
+                    <!-- Thẻ <hr> có class là "duong-ke-khoi", được dùng để tạo đường kẻ ngang nằm phía dưới nội dung "NGOẠI NGỮ"--> 
+                    <hr class="duong-ke-khoi">
+
+                        <!-- Thẻ <div> có class là "muc-ky-nang", được dùng để nhóm các thông tin trong mục kỹ năng lại với nhau, giúp dễ dàng định dạng và bố trí bằng CSS --> 
+                        <div class="muc-ky-nang">
+                            <!-- Thẻ <p> có class là "ten-ky-nang", được dùng để hiển thị tên kỹ năng — ở đây là "Tiếng Anh". Vì <p> là thẻ đoạn văn, nên nội dung sẽ được hiển thị tách biệt và tự động xuống dòng, giúp bố cục CV rõ ràng hơn. -->
+                            <p class="ten-ky-nang">Tiếng Anh</p>
+                            <!-- Thẻ <p> có class là "diem-ky-nang", dùng để hiển thị chi tiết hoặc trình độ tương ứng của kỹ năng ở trên. Trong trường hợp này, "IELTS 5.5" thể hiện mức độ thành thạo ngoại ngữ hiện tại -->
+                            <p class="diem-ky-nang">IELTS 5.5</p>
+                        </div>
+    
+                </div>
+        </section>
+
+        <!-- Thẻ <section> có class là "cot-phai", nghĩa là phần nằm bên phải của khung CV, dùng để nhóm các thông tin chi tiết hơn lại với nhau -->
+        <section class="cot-phai">
+
+            <!-- Thẻ <header> có class là "header-phai", dùng để nhóm một tập hợp các thẻ tiêu đề. Ở đây được dùng để định nghĩa phần đầu (header) của khu vực bên phải CV. Phần này thường chứa các thông tin quan trọng nhất cột phải CV -->
+            <header class="header-phai">
+                <!-- Thẻ <h1> là thẻ tiêu đề có cấp độ cao nhất trong sáu cấp độ tiêu đề (từ <h1> đến <h6>), có nghĩa là "Tiêu đề quan trọng nhất" trên toàn bộ trang -->
+                <!-- Thẻ <h1> có class là "ten-day-du", hiển thị tên đầy đủ của ứng viên — ở đây là "NGUYỄN THÙY TIÊN", đây là nội dung quan trọng nhất-->
+                <h1 class="ten-day-du">NGUYỄN THÙY TIÊN</h1>
+                <!-- Thẻ <p> có class là "chuc-danh". Ở đây nội dung là "Computer Science", thể hiện chuyên ngành đang theo học. -->
+                <p class="chuc-danh">Computer Science</p>
+            </header>
+
+            <!-- Thẻ <div> có class là "khu-vuc-muc-tieu", được dùng để nhóm các thông tin về mục tiêu của ứng viên lại với nhau, giúp dễ dàng định dạng và bố trí bằng CSS -->
+            <div class="khu-vuc-muc-tieu">
+                <!-- Ở đây, tiêu đề lớn là "MỤC TIÊU NGHỀ NGHIỆP" – giúp người xem dễ nhận biết mục tiêu nghề nghiệp được đưa ra trong CV -->  
+                <h2 class="tieu-de-khoi-phai">MỤC TIÊU NGHỀ NGHIỆP</h2>
+                <!-- Thẻ <hr> có class là "duong-ke-phai", được dùng để tạo đường kẻ ngang nằm phía dưới nội dung "MỤC TIÊU NGHỀ NGHIỆP"-->
+                <hr class="duong-ke-phai">
+                <!-- Thẻ <p> có class là "noi-dung-muc-tieu", được dùng để hiển thị đoạn văn mô tả mục tiêu nghề nghiệp của sinh viên ngành Khoa học Máy tính (CS). Nội dung trong đoạn này thể hiện định hướng nghề nghiệp, kỹ năng và mục tiêu phát triển bản thân của ứng viên. -->
+                <p class="noi-dung-muc-tieu">
+                    Sinh viên Khoa học Máy tính (CS) đầy nhiệt huyết và có thành tích học tập xuất sắc, tìm kiếm cơ hội thực tập hoặc vị trí Fresher để áp dụng kiến thức và kỹ năng thực tế. Có kinh nghiệm vững chắc về Java, C++, HTML, CSS, JS và quen thuộc với phát triển web, phân tích dữ liệu. Là người học hỏi nhanh, có khả năng giải quyết vấn đề tốt, và luôn sẵn sàng đóng góp vào sự thành công của đội ngũ.
+                </p>
+            </div>
+
+            <!-- Thẻ <div> có class là "khu-vuc-kinh-nghiem", được dùng để nhóm các thông tin về kinh nghiệm của ứng viên lại với nhau, giúp dễ dàng định dạng và bố trí bằng CSS -->
+            <div class="khu-vuc-kinh-nghiem">
+                <!-- Ở đây, tiêu đề lớn là "KINH NGHIỆM LÀM VIỆC" – giúp người xem dễ nhận biết mục tiêu nghề nghiệp được đưa ra trong CV -->
+                <h2 class="tieu-de-khoi-phai">KINH NGHIỆM LÀM VIỆC</h2>
+                <!-- Thẻ <hr> có class là "duong-ke-phai", được dùng để tạo đường kẻ ngang nằm phía dưới nội dung "KINH NGHIỆM LÀM VIỆC"-->
+                <hr class="duong-ke-phai">
+
+                <!-- Thẻ <div> có class là "muc-kinh-nghiem", được dùng để nhóm các thông tin trong mục kinh nghiệm lại với nhau, giúp dễ dàng định dạng và bố trí bằng CSS -->
+                <div class="muc-kinh-nghiem">
+                    <!-- Thẻ <div> có class là "thong-tin-chinh", dùng để chứa các thông tin chính của mục kinh nghiệm -->
+                    <div class="thong-tin-chinh">
+                        <!-- Thẻ <span> có class là "thoi-gian-kn", chứa nội dung "10/2025–now" thể hiện mốc thời gian làm việc, vì là thẻ <span> nên thời gian này sẽ nằm trên một dòng -->
+                        <span class="thoi-gian-kn">10/2025-now</span>
+                    </div>
+                    <!-- Trong trường hợp này, thẻ <p> có class là "chuc-danh-kn" và chứa nội dung "Web Developer", thể hiện vị trí công việc muốn đảm nhận -->
+                    <p class="chuc-danh-kn">Web Developer</p>
+                    <!-- thẻ ul là thẻ tạo danh sách không có thứ tự, thẻ bọc ngoài toàn bộ danh sách, tức là có dấu chấm tròn phía trước nội dung trong danh sách -->
+                    <ul class="mo-ta-kn">
+                        <!-- Thẻ <li> là phần tử con của <ul>, đại diện cho một mục trong danh sách. Ở đây, 2 thẻ <li> chứa nội dung thể hiện kinh nghiệm, trách nhiệm, loại công việc đã làm -->
+                        <li>Chịu trách nhiệm thiết kế, lập trình và bảo trì các tính năng Front-end cho ứng dụng Pro Lib Portal</li>
+                        <li>Tôi đã phân tích hiệu suất code và áp dụng các kỹ thuật tối ưu hóa (ví dụ: lazy loading, nén hình ảnh, caching) cho các trang sản phẩm có lưu lượng truy cập cao: Kết quả là thời gian phản hồi của máy chủ (Server Response Time) giảm 50 miligiây (ms) và xếp hạng SEO của trang tăng 2 bậc</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Thẻ <div> có class là "khu-vuc-chung-chi", được dùng để nhóm các thông tin về chứng chỉ đã đạt được lại với nhau, giúp dễ dàng định dạng và bố trí bằng CSS -->
+            <div class="khu-vuc-chung-chi">
+                <!-- Ở đây, tiêu đề lớn là "CHỨNG CHỈ" – giúp người xem dễ nhận biết những chính chỉ đã đạt được -->
+                <h2 class="tieu-de-khoi-phai">CHỨNG CHỈ</h2>
+                <!-- Thẻ <hr> có class là "duong-ke-phai", được dùng để tạo đường kẻ ngang nằm phía dưới nội dung "CHỨNG CHỈ"-->
+                <hr class="duong-ke-phai">
+                <!-- thẻ ul là thẻ tạo danh sách không có thứ tự, thẻ bọc ngoài toàn bộ danh sách, tức là có dấu chấm tròn phía trước nội dung trong danh sách -->
+                <ul class="mo-ta-chungchi">
+                    <!-- thẻ li là thẻ con của thẻ ul, tạo một mục (item) trong danh sách, ở đây item là AWS Certified Developer -  Associate (CDA) -->
+                    <li>AWS Certified Developer -  Associate (CDA)</li>
+                    <!-- thẻ li là thẻ con của thẻ ul, tạo một mục (item) trong danh sách, ở đây item là Certified ScrumMaster (CSM) -->
+                    <li>Certified ScrumMaster (CSM)</li>
+                </ul>
+            </div>
+
+        </section>
+</body>
+</html>

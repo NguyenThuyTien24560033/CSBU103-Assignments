@@ -1,0 +1,281 @@
+
+
+/* Định dạng cơ bản cho toàn bộ phần thân tài liệu (body) */
+body {
+    /* Thiết lập phông chữ: Ưu tiên 'Arial', nếu không có sẽ dùng 'sans-serif'. Đây là một font chữ không chân, đảm bảo tính phổ biến và dễ đọc */
+    font-family: Arial, sans-serif;
+    /* thiết lập chiều cao dòng = 1.6 lần chiều cao phông chữ, thoáng với dễ đọc hơn */
+    line-height: 1.6;
+    /* margin là cái lề ngoài, = 0 nghĩa là xóa lề ngoài. Đảm bảo nội dung dính sát vào các cạnh trình duyệt*/
+    margin: 0;
+    /* padding là đệm trong, = 0 nghĩa là xóa đệm trong. Đảm bảo không có khoảng trống thừa bên trong body */
+    padding: 0;
+    /* thiết lập màu nền, #f4f4f4 nghĩa là mã màu nền là màu xám nhạt tượng như trắng */
+    background-color: #f4f4f4;
+}
+
+/* Định dạng cho phần tử có class = cv-container */
+.cv-container {
+    /* Bật chế độ Flexbox để sắp xếp các phần con linh hoạt */
+    display: flex; 
+    /* Đặt chiều rộng cố định của CV là 900px */
+    width: 900px; 
+    /* Tạo lề trên và dưới là 30px, hai bên auto để căn giữa trang */
+    margin: 30px auto; 
+    /* mã #fff là màu trắng tinh */
+    background-color: #fff;
+    /* Tạo bóng đổ cho khung CV, mang lại hiệu ứng nổi 3D nhẹ. Ko có độ lệch ngang và dọc(0 0), độ mờ của bóng là 10px,rgba là biểu diễn màu => màu đen (0, 0, 0) với độ trong suốt 0.1 =10% nói chung là rất mờ */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* bo các góc thành hơi tròn tròn 8px */
+    border-radius: 8px;
+     /* Ẩn nội dung bị tràn ra ngoài (nếu có), giúp bố cục gọn gàng hơn */
+    overflow: hidden; 
+}
+
+/* Định dạng cho phần tử có class = cot-trai (Cột Trái) */
+.cot-trai {
+    /* Chiều rộng chiếm 35% tổng chiều rộng của .cv-container (phần tử mẹ) */
+    width: 35%; 
+    /* #3f51b5 là màu xanh đậm */
+    background-color: #3f51b5;
+     /* Toàn bộ chữ bên trong Cột Trái có màu trắng */
+    color: #fff;
+    /* Đệm bên trên & dưới là 30px, hai bên trái & phải là 20px */
+    padding: 30px 20px;
+    /* width = 35% of cv-container = content + padding + border */
+    box-sizing: border-box; 
+}
+
+/* Định dạng cho phần tử có class = khu-vuc-anh (khung chứa ảnh) */
+.khu-vuc-anh {
+    /* Căn chỉnh nội dung nằm trong (text-align), center => căn giữa ảnh và văn bản ra giữa khung chứa */
+    text-align: center;
+     /* Tạo khoảng cách 30px giữa khu vực ảnh và phần nội dung bên dưới */
+    margin-bottom: 30px;
+    /* Bo tròn 10px ở các góc khung ảnh */
+    border-radius: 10px; 
+}
+
+/* Định dạng cho phần tử có class = anh-dai-dien (ảnh đại diện trong khung ảnh) */
+.anh-dai-dien {
+     /* Đặt kích thước ảnh thành hình vuông 150x150px */
+    width: 150px; 
+    height: 150px;
+    /* Ảnh được phóng to/thu nhỏ để phủ kín khung, giữ nguyên tỷ lệ và cắt phần thừa */
+    object-fit: cover; 
+    /* viền bao quanh ảnh => dày 4px, nét liền, màu trắng tinh */
+    border: 4px solid #fff;
+    /* bo tròn các góc của phần tử với bán kính bằng 50% chiều rộng và chiều cao => tạo thành hình tròn hoàn hảo nếu ảnh là hình vuông */
+    border-radius: 50%; 
+}
+
+/* Định dạng chung cho cả hai class: .tieu-de-lien-lac và .tieu-de-khoi */
+.tieu-de-lien-lac, .tieu-de-khoi {
+     /* Màu chữ trắng */
+    color: #fff;
+    /* Kích thước chữ của tiêu đề là 1.2 lần kích thước font chữ mặc định */
+    font-size: 1.2em;
+    /* Tạo khoảng cách 10px bên dưới tiêu đề */
+    margin-bottom: 10px;
+    /* Chuyển toàn bộ chữ trong tiêu đề thành chữ in hoa */
+    text-transform: uppercase;
+}
+
+/* Định dạng chung cho hai class: .duong-ke và .duong-ke-khoi */
+.duong-ke, .duong-ke-khoi {
+    /* Xóa bỏ tất cả các viền mặc định của phần tử */
+    border: none;
+    /* Đặt đường viền chỉ ở phía trên, lệnh sau nên nó vẫn làm chứ ko xóa như lệnh trên. đường liền, dày 1px, màu trắng tinh (255, 255, 255) với độ trong suốt 50% (0.5) */
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    /* Tạo khoảng cách 20px bên dưới đường kẻ để tách các phần nội dung */
+    margin-bottom: 20px;
+}
+
+/* Định dạng cho phần tử có class = muc-lien-lac  */
+.muc-lien-lac {
+    /* Bật chế độ Flexbox để sắp xếp các phần con linh hoạt */
+    display: flex;
+    /* Căn giữa các phần tử con theo chiều dọc. */
+    align-items: center;
+    /* Tạo khoảng cách 15px bên dưới mỗi mục liên lạc */
+    margin-bottom: 15px;
+}
+
+/* Định dạng cho phần tử có class = icon nằm trong .muc-lien-lac */
+.muc-lien-lac .icon {
+    /* Kích thước của icon là 1.2 lần kích thước font chữ */
+    font-size: 1.2em;
+    /* Tạo khoảng cách 10px giữa icon và nội dung văn bản bên cạnh */
+    margin-right: 10px;
+    /* màu xanh/tím nhạt */
+    color: #c5cae9; 
+}
+
+/* Định dạng cho phần tử có class = thong-tin nằm trong .muc-lien-lac */
+.muc-lien-lac .thong-tin {
+    /* Kích thước chữ bằng 95% kích thước phông chữ của phần tử chứa nó */
+    font-size: 0.95em;
+    /* Màu chữ xanh nhạt */
+    color: #e8eaf6;
+}
+
+/* Định dạng chung cho hai khu vực: học vấn và kỹ năng */
+.khu-vuc-hoc-van, .khu-vuc-ky-nang {
+    /* Tạo khoảng cách 30px phía trên để tách biệt các khu vực nội dung */
+    margin-top: 30px;
+}
+
+/* Định dạng cho phần tử có class = thoi-gian */
+.thoi-gian {
+    /* Kích thước chữ bằng 85% kích thước phông chữ của phần tử chứa nó */
+    font-size: 0.85em;
+    /* Màu xanh tím nhạt */
+    color: #c5cae9;
+    /* Tạo khoảng cách 5px bên dưới thời gian để tách với phần thông tin kế tiếp */
+    margin-bottom: 5px;
+}
+
+/* Định dạng cho phần tử <strong> nằm trong class = ten-truong */
+.ten-truong strong {
+    font-size: 0.95em;
+    /* Hiển thị như một khối riêng, giúp tên trường nằm trên một dòng riêng biệt */
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Định dạng chung cho hai class: .chi-tiet-hv và .mo-ta-kn  */
+.chi-tiet-hv, .mo-ta-kn {
+    /* Dấu đầu dòng của danh sách (<ul> hoặc <ol>) là hình tròn đặc (chấm tròn) */
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 0.9em;
+    color: #e8eaf6;
+    margin-top: 5px;
+}
+
+/* Định dạng cho từng mục kỹ năng */
+.muc-ky-nang {
+    margin-bottom: 10px;
+}
+
+/* Định dạng cho tên kỹ năng */
+.ten-ky-nang {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+/* Định dạng cho điểm hoặc mô tả mức độ kỹ năng */
+.diem-ky-nang {
+    font-size: 0.9em;
+    color: #c5cae9;
+}
+
+
+/* Định dạng cho phần tử có class = cot-phai (Cột Phải) */
+.cot-phai {
+    width: 65%; 
+    padding: 30px 40px;
+    background-color: #fff;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* Định dạng cho phần tử có class = header-phai (phần đầu của cột phải) */
+.header-phai {
+    margin-bottom: 30px;
+}
+
+/* Định dạng cho phần tử có class = ten-day-du */
+.ten-day-du {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+    /* màu xanh đậm */
+    color: #3f51b5; 
+    text-transform: uppercase;
+}
+
+/* Định dạng cho phần tử có class = chuc-danh */
+.chuc-danh {
+    font-size: 1.2em;
+    /* màu xám trung tính */
+    color: #555;
+    /* Độ đậm của chữ là bình thường, tránh việc nó nằm trong h1-h6 hay mấy thẻ như strong thì nội dung sẽ quá đậm*/
+    font-weight: normal;
+    margin-top: 0;
+}
+
+/* Định dạng cho phần tử có class = tieu-de-khoi-phai */
+.tieu-de-khoi-phai {
+    font-size: 1.3em;
+    color: #3f51b5; 
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Định dạng cho phần tử có class = duong-ke-phai */
+.duong-ke-phai {
+    /* Xóa bỏ toàn bộ viền mặc định */
+    border: none;
+    border-top: 2px solid #3f51b5;
+    margin-bottom: 20px;
+    width: 60px; 
+    text-align: left;
+    margin-left: 0;
+}
+
+/* Định dạng cho phần tử có class = noi-dung-muc-tieu */
+.noi-dung-muc-tieu {
+    font-size: 0.95em;
+    margin-bottom: 30px;
+    /* Căn đều hai bên lề, giúp đoạn văn trông gọn gàng và chuyên nghiệp hơn */
+    text-align: justify;
+}
+
+/* Định dạng cho phần tử có class = muc-kinh-nghiem */
+.muc-kinh-nghiem {
+    margin-bottom: 25px;
+}
+
+/* Định dạng cho phần tử có class = thong-tin-chinh */
+.thong-tin-chinh {
+    margin-bottom: 5px;
+}
+
+/* Định dạng cho phần tử có class = thoi-gian-kn */
+.thoi-gian-kn {
+    font-size: 0.9em;
+    color: #777;
+    /* nghĩa là ko có ngắt dòng, để cho thời gian nằm trên cùng 1 dòng duy nhất */
+    white-space: nowrap; 
+}
+
+/* Định dạng cho phần tử có class = chuc-danh-kn */
+.chuc-danh-kn {
+    /* bold nghĩa là in đậm */
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+    font-size: 0.95em;
+}
+
+/* Định dạng cho phần tử có class = mo-ta-kn */
+.mo-ta-kn {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 0.9em;
+    color: #444;
+}
+
+/* Định dạng cho phần tử có class = mo-ta-chung-chi*/
+.mo-ta-chung-chi {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 0.9em;
+    color: #444;
+}
+
+/* Định dạng cho phần tử có class = khu-vuc-chung-chi */
+.khu-vuc-chung-chi {
+    margin-top: 30px;
+}
