@@ -1,0 +1,143 @@
+/* thiết lập css cho toàn bộ nội dung trong trang */
+body {
+  /* khoảng trống top/bottom/top/right một khoảng 40px */
+  margin: 40px;
+  /* thiết lập chiều cao của body bằng 100% chiều cao của khung nhìn */
+  height: 100vh;
+  /* bật Flexbox cho body để dễ dàng căn chỉnh các phần tử con */
+  display: flex;
+  /* căn các phần tử con theo chiều ngang vào giữa */
+  justify-content: center;
+  /* căn các phần tử con theo chiều dọc vào giữa */
+  align-items: center;
+  /* thiết lập phông chữ chính là Arial. Nếu Arial không có, dùng phông chữ sans-serif*/
+  font-family: 'Arial', sans-serif;
+
+}
+
+/* css cho thân Máy tính */
+.main-cal {
+  /* đặt chiều rộng cố định 400px */
+  width: 400px;
+  /* height tự động tính toán dựa trên nội dung bên trong nó */
+  height:auto;
+  /* màu nền trắng */
+  background: white;
+  /* bo tròn các góc của khung chứa với bán kính 28px */
+  border-radius: 28px;
+  /* thiết lập padding cho toàn bộ: 28px */
+  padding: 28px;
+  /* thiết lập bóng, bóng dịch chuyển xuống dưới 10px, làm mờ 30px, màu bóng là đen mờ (30% độ trong suốt) */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* màn hình hiển thị input và output */
+.top-cal {
+  /* màu nền là #f8f9fa hơi trắng xanh */
+  background: #f8f9fa;
+  /* màu chữ là màu đen */
+  color: #000;
+  /* thiết lập kích thước chữ = 4.5 chữ gốc */
+  font-size: 4.5rem;
+  /* độ đậm của chữ là 300, hơi mảnh */
+  font-weight: 300;
+  /* chữ căn phải */
+  text-align: right;
+  /* padding top/bottom: 30px, right/left:20px */
+  padding: 30px 20px;
+  /* khoảng cách dưới một khoảng 24px */
+  margin-bottom: 24px;
+  /* bo tròn góc bán kích 18px */
+  border-radius: 18px;
+  /* chiều cao tối thiểu của màn hình dù ko có nội dung là 110px*/
+  min-height: 110px;
+  /* đổ bóng bên trong chứ ko phải bên ngoài, thiết lập bóng, bóng dịch chuyển xuống dưới 10px, làm mờ 30px, màu bóng là đen mờ (30% độ trong suốt) */
+  box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* css phần body chứa các nút bấm */
+.body-cal {
+  /* dạng lưới */
+  display: grid;
+  /* có tổng là 3 cột rộng bằng nhau(1fr)  */
+  grid-template-columns: repeat(3, 1fr);  
+  /* tổng 5 hàng cao cố định 68px */
+  /* hàng cuối là tùy chỉnh dựa trên nội dung, cho nút = và claer */
+  grid-template-rows: repeat(5, 68px) auto; 
+  /* khoảng cách giữa các nút là 14px */
+  gap: 14px;
+}
+
+/* nút bấm thường, trừ = và clear */
+.input-bnt {
+  /* bo tròn góc bán kích 16px */
+  border-radius: 16px;
+  /* ko viền */
+  border: none;
+  /* nền màu #f0f2f5 */
+  background: #f0f2f5;
+  /* chữ màu mã #333 */
+  color: #333;
+  /* thiết lập kích thước chữ = 1.9 chữ gốc */
+  font-size: 1.9rem;
+  /* độ đậm là 500, vừa phải */
+  font-weight: 500;
+  /* con trỏ chuột tới là hình bàn tay */
+  cursor: pointer;
+  /* hiệu ứng, khi di chuột thì cần 0.2s để đổi từ css cũ sang css mới */
+  transition: all 0.2s;
+  /* thiết lập bóng, bóng dịch chuyển xuống dưới 10px, làm mờ 30px, màu bóng là đen mờ (30% độ trong suốt) */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+/* khi di chuột vào thì màu nền đổi thành #e4e6eb, nâng nút lên 2px */
+.input-bnt:hover { background: #e4e6eb; transform: translateY(-2px); }
+/* khi nhấn nút, nút sẽ hạ xuống 2px */
+/* thiết lập bóng, bóng dịch chuyển xuống dưới 2px, làm mờ 4px, màu bóng là đen mờ (20% độ trong suốt) */
+.input-bnt:active { transform: translateY(2px); box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+
+/* đến class input-bnt, chọn phần tử cuối cùng, chính là nút bấm = */
+.input-bnt:last-child {
+  /* màu nền #2196f3; */
+  background: #2196f3;
+  /* màu chữ trắng */
+  color: white;
+  /* kích thước chữ = 2.2 chữ gốc */
+  font-size: 2.2rem;
+  /* nằm ở hàng lưới thứ 6 */
+  grid-row: 6;  
+  /* chiếm cột thứ nhất, bắt đầu ở cột 1 và kết thúc ở đầu cột 2*/
+  grid-column: 1 / 2; 
+}
+
+/* nút clear */
+.clear-bnt {
+  /* nằm ở hàng lưới thứ 6 */
+  grid-row: 6;
+  /* chiếm 2 cột phía sau, bắt đầu ở cột 2 và kết thúc ở đầu cột 4 */
+  grid-column: 2 / 4; 
+  /* màu nền #ffebee */
+  background: #ffebee;
+  /* màu chữ #e91e63 */
+  color: #e91e63;
+  /* kích thước chữ = 1.8 chữ gốc */
+  font-size: 1.8rem;
+  /* chữ in đậm */
+  font-weight: bold;
+  /* bo tròn góc bán kính 16px */
+  border-radius: 16px;
+  /* ko viền */
+  border: none;
+  /* dí chuột vào thì thành hình bàn tay */
+  cursor: pointer;
+  /* thiết lập bóng, bóng dịch chuyển xuống dưới 4px, làm mờ 10px, màu bóng là đỏ mờ (25% độ trong suốt) */
+  box-shadow: 0 4px 10px rgba(233,30,99,0.25);
+}
+/* khi di chuột vào thì màu nền đổi thành ##ffcdd2, nâng nút lên 2px */
+.clear-bnt:hover {
+  background: #ffcdd2;
+  transform: translateY(-2px);
+}
+/* khi nhấn nút, nút sẽ hạ xuống 2px */
+.clear-bnt:active {
+  transform: translateY(2px);
+}

@@ -1,0 +1,32 @@
+chào thầy, sau đây là các bước em làm để chạy web
+đầu tiên là chạy backend, em sẽ chạy lệnh sau PS D:\Dev\CSBU103-Assignments\Week4\Photo-Web\backend> npm run dev
+Sau khi backend chạy thành công sẽ hiển thị 
+PS D:\Dev\CSBU103-Assignments\Week4\Photo-Web\backend> npm run dev
+
+> backend@1.0.0 dev
+> nodemon src/server.js
+
+[nodemon] 3.1.10
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node src/server.js`
+[dotenv@17.2.3] injecting env (2) from .env -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+Liên kết database thành công!
+server starts in port 8000
+
+
+tiếp theo em chạy frontend, em chạy song song 2 terminal ạ
+lệnh: PS D:\Dev\CSBU103-Assignments\Week4\Photo-Web\frontend> npm run dev
+sau khi thành công: 
+PS D:\Dev\CSBU103-Assignments\Week4\Photo-Web\frontend> npm run dev
+
+> photo-web@0.0.0 dev
+> vite
+
+
+  VITE v7.2.4  ready in 786 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help

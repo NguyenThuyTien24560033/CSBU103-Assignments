@@ -1,0 +1,58 @@
+/* thiết lập css cho toàn bộ nội dung trong trang */
+body {
+    /* thiết lập phông chữ chính là Arial. Nếu Arial không có, dùng phông chữ sans-serif*/
+    font-family: 'Arial', sans-serif;
+    /* tạo nền sử dụng màu chuyển tiếp từ màu #667eea sang #764ba2 theo góc 135 độ. */
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    /* thiết lập màu chữ mặc định cho toàn bộ trang là màu trắng */
+    color: white;
+    /* thiết lập chiều cao của body bằng 100% chiều cao của khung nhìn */
+    height: 100vh;
+    /* bật Flexbox cho body để dễ dàng căn chỉnh các phần tử con */
+    display: flex;
+    /* căn các phần tử con theo chiều ngang vào giữa */
+    justify-content: center;
+    /* căn các phần tử con theo chiều dọc vào giữa */
+    align-items: center;
+}
+/* khung hộp chứa tiêu đề thời gian và ngày tháng */
+.container {
+    /* căn nội dung văn bản bên trong .container vào giữa*/
+    text-align: center;
+    /* thiết lập màu nền là đen (0, 0, 0) với độ trong suốt 40% (0.4), tạo hiệu ứng mờ ảo */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* thiết lập padding: top/bottom:40px và right/left: 60px */
+    padding: 40px 60px;
+    /* bo tròn các góc của khung chứa với bán kính 20px */
+    border-radius: 20px;
+    /* thiết lập bóng, bóng dịch chuyển xuống dưới 10px, làm mờ 30px, màu bóng là đen mờ (30% độ trong suốt) */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    /* chiều rộng/chiều cao bao gồm cả padding và border */
+    box-sizing: border-box;
+}
+/* css tiêu đề */
+h1 {
+    /* tạo khoảng trống bên dưới một khoảng 20px */
+    margin-bottom: 20px;
+    /* thiết lập kích thước chữ = 2.5 chữ gốc */
+    font-size: 2.5rem;
+}
+/* css phần có id là time, nơi hiển thị giờ:phút:giây */
+#time {
+    /* thiết lập kích thước chữ = 5 chữ gốc */
+    font-size: 5rem;
+    /* chữ đậm */
+    font-weight: bold;
+    /* khoảng trống top/bottom một khoảng 20px, top/right là không */
+    margin: 20px 0;
+    /* khoảng cách giữa các kí tự là 3px, làm cho các số dễ đọc hơn */
+    letter-spacing: 3px;
+}
+/* css phần có id là date, nơi hiển thị thứ:ngày:tháng:năm */
+#date {
+    /* thiết lập kích thước chữ = 1.8 chữ gốc */
+    font-size: 1.8rem;
+    /* giảm độ mờ xuống còn 0.9(90%) */
+    opacity: 0.9;
+}
+

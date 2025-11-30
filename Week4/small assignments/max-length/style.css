@@ -1,0 +1,129 @@
+/* thiết lập css cho toàn bộ nội dung trong trang */
+body {
+    /* thiết lập phông chữ chính là Arial. Nếu Arial không có, dùng phông chữ sans-serif*/
+    font-family: 'Arial', sans-serif;
+    /* tạo nền sử dụng màu chuyển tiếp từ màu #667eea sang #764ba2 theo góc 135 độ. */
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    /* thiết lập màu chữ mặc định cho toàn bộ trang là màu trắng */
+    color: white;
+    /* thiết lập chiều cao của body bằng 100% chiều cao của khung nhìn */
+    height: 100vh;
+    /* bật Flexbox cho body để dễ dàng căn chỉnh các phần tử con */
+    display: flex;
+    /* căn các phần tử con theo chiều ngang vào giữa */
+    justify-content: center;
+    /* căn các phần tử con theo chiều dọc vào giữa */
+    align-items: center;
+}
+
+.container {
+    /* căn nội dung văn bản bên trong .container vào giữa*/
+    text-align: center;
+    /* thiết lập màu nền trắng */
+    background: white;
+    /* thiết lập padding: top/bottom:40px và right/left: 60px */
+    padding: 40px 60px;
+    /* bo tròn các góc của khung chứa với bán kính 20px */
+    border-radius: 20px;
+    /* thiết lập bóng, bóng dịch chuyển xuống dưới 10px, làm mờ 30px, màu bóng là đen mờ (30% độ trong suốt) */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    /* chiều rộng/chiều cao bao gồm cả padding và border */
+    box-sizing: border-box;
+}
+/* css cho phần tiêu đề */
+h2 { 
+    /* tạo khoảng trống bên dưới một khoảng 20px */
+    margin-bottom: 20px;
+    /* thiết lập kích thước chữ = 2.5 chữ gốc */
+    font-size: 2.5rem;
+    /* màu chữ là màu #333 (màu xám đen) */
+    color: #333; }
+/* css cho phần nhãn */
+label {
+  display: block;
+  /* chữ in đậm */
+  font-weight: bold;
+  /* tạo khoảng trống bên dưới một khoảng 10px */
+  margin-bottom: 10px;
+  /* màu chữ là màu #444 (màu xám đen nhạt hơn) */
+  color: #444;
+  /* căn chữ lề trái */
+  text-align: left;
+}
+
+/* css cho element có id là userInput */
+#userInput {
+/* chiều rộng bằng 100% của phần tử cha (.container). */
+  width: 100%;
+/* thiết lập padding: top/bottom/right/left: 16px */
+  padding: 16px;
+/* thiết lập kích thước chữ = chữ gốc */
+  font-size: 1rem;
+/* tạo đường viền dày 2px màu đen nét liền */
+  border: 2px solid #ddd;
+/* bo tròn góc bán kính 12px */
+  border-radius: 12px;
+}
+
+/* css phần hiển thị nhập số lượng kí tự */
+.info {
+/* tạo khoảng cách top/bottom: 12px và right/left:0 */
+  margin: 12px 0;
+/* thiết lập kích thước chữ = 1.1 chữ gốc */
+  font-size: 1.1rem;
+/* màu chữ là màu #555 (màu xám đen nhạt hơn #444) */
+  color: #555;
+/* căn chữ bên phải */
+  text-align: right;
+}
+
+/* css phần chứa id là charCount, là phần số đếm độ dài của giá trị được nhập vào */
+#charCount {
+/* chữ in đậm */
+  font-weight: bold;
+/* màu chữ là màu hơi hồng mix đỏ, mã #e91e63*/
+  color: #e91e63;
+  
+}
+
+/* css phần chứa id enterBtn, phần nút enter */
+#enterBtn {
+/* chiều rộng bằng 100% của phần tử cha (.container). */
+  width: 100%;
+ /* thiết lập padding: top/bottom/right/left: 14px */
+  padding: 14px;
+  /* tạo khoảng cách top: 15px*/
+  margin-top: 15px;
+   /* thiết lập màu nền mã #667eea, hơi pha xanh tím*/
+  background: #667eea;
+  /* màu chữ trắng */
+  color: white;
+  /* loại bỏ viền */
+  border: none;
+/* bo tròn góc bán kính 12px */
+  border-radius: 12px;
+/* thiết lập kích thước chữ = 1.1 chữ gốc */
+  font-size: 1.1rem;
+/* chữ in đậm */
+  font-weight: bold;
+/* thay đổi con trỏ chuột thành hình bàn tay */
+  cursor: pointer;
+}
+/* khi di chuộc vào nút enter thì màu đổi thành mã #5a6fd8 */
+#enterBtn:hover { background: #5a6fd8; }
+
+/* css phần hiện thông báo dưới nút enter */
+#message {
+/* tạo khoảng cách top: 20px*/
+  margin-top: 20px;
+/* thiết lập padding: top/bottom/right/left: 12px */
+  padding: 12px;
+/* chữ in đậm */
+  font-weight: bold;
+/* chữ căn giữa */
+  text-align: center;
+/* bo tròn góc bán kính 8px */
+  border-radius: 8px;
+/* chiều cao tối thiểu 20px */
+  min-height: 20px;
+}

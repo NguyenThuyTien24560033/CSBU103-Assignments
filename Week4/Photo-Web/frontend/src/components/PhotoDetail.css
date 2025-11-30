@@ -1,0 +1,116 @@
+/* lớp phủ nền */
+.photo-overlay {
+  /* phần tử cố định tại vị trí nhất định */
+  position: fixed;
+  /* vị trí mép trên của lớp phủ là 0px so với mép trên cửa sổ */
+  top: 0;
+  /* vị trí mép trái của lớp phủ là 0px so với mép trái cửa sổ */
+  left: 0;
+  /* rộng 100% cửa sổ trình duyệt*/
+  width: 100%;
+  /* cao 100% cửa sổ trình duyệt */
+  height: 100%;
+  /* màu nền đen với độ trong suốt là 60% */
+  background: rgba(0,0,0,0.6);
+  /* bật Flexbox */
+  display: flex;
+  /* căn nội dung ở giữa theo chiều ngang */
+  justify-content: center;
+  /* căn nội dung ở giữa theo chiều dọc */
+  align-items: center;
+  /* lớp phủ này luôn nằm trên cùng của các phần tử khác trên trang */
+  z-index: 1000;
+}
+/* hộp thoại Modal Chính */
+.modal {
+  /* không background */
+  background: none;
+  /* bo tròn góc bán kính 12px */
+  border-radius: 12px;
+  /* đặt toàn bộ padding 20px */
+  padding: 20px;
+  /* chiều rộng max là 1000px */
+  max-width: 1000px;  
+  /* chiều rộng 100% lớp phủ*/
+  width: 100%;
+  /* chiều cao max là 80 viewport  */
+  max-height: 80vh;   
+  /* có nội dung bị tràn thì ẩn đi */
+  overflow: hidden;
+  /* hỗ trợ absolute */
+  position: relative;
+  /* bật flexbox */
+  display: flex;
+  /* sắp xếp mục con theo chiều dọc */
+  flex-direction: column;
+  /* căn mục con ở giữa theo chiều dọc*/
+  align-items: center;
+  
+}
+
+/* nội dung trong modal */
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ảnh hiển thị */
+.modal-image {
+  /* chiều rộng cố định là 1000px */
+  width: 1000px;
+  /* chiều cao tự căn chỉnh */
+  height: auto;
+  /* Chiều cao tối đa là 60% chiều cao của viewport */
+  max-height: 60vh;  
+  /*ảnh được hiển thị hoàn toàn bên trong container mà không bị cắt xén, giữ nguyên tỷ lệ gốc của ảnh  */
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* css cho các nút */
+.modal-actions {
+  display: flex;
+  /* Căn giữa các nút theo chiều ngang */
+  justify-content: center;
+  /* khoảng cách 7px giữa các nút */
+  gap: 7px;
+}
+
+/* nút đóng */
+.btn-close {
+  /* định vị nút tuyệt đối so với phần tử .modal */
+  position: absolute;
+  /* cách mép trên của modal 15px */
+  top: 15px;
+  /* cách mép phải của modal 5px */
+  right: 5px;
+  padding: 0;
+  /* nền trong suốt */
+  background: transparent;
+  border: none;
+  /* kích thucows 30px */
+  font-size: 30px;
+  /* thay đổi con trỏ chuột thành hình bàn tay */
+  cursor: pointer;
+  color: white;
+}
+
+/* nút xóa */
+.btn-delete {
+  padding: 8px 16px;
+  background: #e74c3c;
+  color: white;
+  /* không viền */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  /* từ css cũ chuyển thành css mới mất 0.2s */
+  transition: 0.2s;
+}
+
+/* khi di chuộc vào nút xóa thì đổi màu nền thành mã  #c0392b*/
+.btn-delete:hover {
+  background: #c0392b;
+}

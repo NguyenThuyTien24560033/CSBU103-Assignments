@@ -1,0 +1,72 @@
+/* thanh Điều hướng Chính */
+.main-header {
+    /* màu nền */
+    background-color: #282828; 
+    /* chiều cao 50px */
+    height: 50px; 
+    /* bật flexbox */
+    display: flex;
+    /* căn giữa mục theo chiều dọc */
+    align-items: center; 
+   /* padding top/bottom là 0 và right/left là 20px */
+    padding: 0 20px; 
+    /* chiều rộng và chiều cao chỉ áp dụng cho khu vực nội dung */
+    box-sizing: border-box;
+    /* chiều rộng bằng 100 viewport */
+    width: 100vw;
+    /* giữ header ở vị trí bình thường cho đến khi nó chạm đến ngưỡng cuộn thì nó fixed luôn */
+    position: sticky;
+    /* cách mép trên 0 khi đạt đến ngưỡng cuộn */
+    top:0;
+    /* hiển thị trên cùng các nội dung khá */
+    z-index: 100;
+    /* khoảng cách với các component khác là 0 */
+    margin: 0px;
+
+}
+
+/* container menu */
+.main-top-header {
+    /* bật flexbox */
+    display: flex;
+    /* căn nội dung ra 2 bên*/
+    justify-content: space-between;
+    /*chiều rộng là 100%, chiếm toàn bộ không gian có sẵn */
+    width: 100%; 
+}
+
+/* các item trên thanh header */
+.nav-item {
+    /* loại bỏ gạch chân của Link */
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px; 
+    /* khi hover thì thay đổi màu nền trong 0.3s */
+    transition: background-color 0.3s;
+}
+
+/* khi di chuộc vào item trên thanh header */
+.nav-item:hover {
+    /* đổi màu background */
+    background-color: #555; 
+    /* bo tròn góc bán kính 4px */
+    border-radius: 4px;
+    /* màu chữ */
+    color: plum;
+}
+
+/* home và + */
+.home, .add {
+    /* loại bỏ margin mặc định của thẻ <p> */
+    margin: 0; 
+}
+
+/* nút + */
+.add {
+    /* in đậm */
+    font-weight: bold;
+    font-size: 24px; 
+    /* chiều cao dòng sẽ bằng chính kích thước font của văn bản */
+    line-height: 1;
+}

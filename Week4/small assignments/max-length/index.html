@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 2 - Max 50 Characters</title>
+  <!-- nơi liên kết css -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+     <!-- khối chứ toàn bộ nội dung -->
+  <div class="container">
+    <!-- tiêu đề -->
+    <h2>Enter Text (Max 50 Characters)</h2>
+    <!-- nhãn hiển thị cho vùng nhập liệu, dùng for ở đây để liên kết với id bên textarea -->
+    <label for="userInput">Your Message:</label>
+    <!-- nơi nhập nội dung giá trị, placeholder là gợi ý nhập -->
+    <textarea id="userInput" placeholder="Type here..."></textarea>
+    <!-- khối hiển thị đếm số kí tự được nhập -->
+    <div class="info">
+      Characters: <span id="charCount">0</span> / 50
+    </div>
+    <!-- thêm nút bấm enter -->
+    <button id="enterBtn">Enter</button>
+    <!-- chỗ hiển thị thông báo, valid or too long, sẽ được gửi từ JS -->
+    <div id="message"></div>
+  </div>
+  <!-- nơi liên kết với JS -->
+  <script src="script.js"></script>
+</body>
+</html>

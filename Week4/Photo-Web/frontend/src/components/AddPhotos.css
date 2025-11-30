@@ -1,0 +1,144 @@
+/*css cho toàn bộ trang thêm ảnh */
+.add-container {
+    /* bật flexbox */
+    display: flex;
+    /* căn giữa form theo chiều ngang */
+    justify-content: center; 
+    /* đặt form lên đầu trang */
+    align-items: flex-start; 
+    /* padding top/bottom: 40px, right/left: 20px */
+    padding: 40px 20px;
+    /* chiều cao min là 100 viewport, nghĩa là chiếm toàn bộ chiều cao màn hình */
+    min-height: 100vh; 
+    /* màu nền hơi trắng */
+    background-color: #f4f7f6; 
+}
+
+/* css form thêm ảnh */
+.add-photo-container {
+    background: #ffffff;
+    padding: 30px;
+    /* bo tròn góc bán kính 12px */
+    border-radius: 12px;
+    /* thiết lập bóng, bóng dịch chuyển xuống dưới 10px, làm mờ 30px, màu bóng là đen mờ (30% độ trong suốt) */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    /* chiều rộng là 100% add-container*/
+    width: 100%;
+    /* chiều rộng max là 450px */
+    max-width: 450px; /* Giới hạn chiều rộng của form */
+}
+
+/* tiêu đề form */
+.add-photo-container h2 {
+    /* cỡ chữ = 1.8 cỡ chữ gốc */
+    font-size: 1.8em;
+    /* màu chữ */
+    color: #333;
+    /* khoảng cách 25px phía dưới tiêu đề */
+    margin-bottom: 25px;
+    /* tạo một đường kẻ mỏng màu xám nhạt dưới tiêu đề */
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+/* css các trường input và nút */
+.add-photo-form {
+    /* bật flexbox */
+    display: flex;
+    /* sắp xếp các thành phần form (input, nút) theo chiều dọc */
+    flex-direction: column;
+    /* khoảng cách giữa các phần tử trong form */
+    gap: 20px;
+}
+
+/* css cho input tải file"] */
+.add-photo-form input[type="file"] {
+    /* tạo một đường viền đứt nét dày 2px màu xám nhạt */
+    border: 2px dashed #ccc; 
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fafafa;
+    /* di chuộc vào thì thành bàn tay */
+    cursor: pointer;
+    font-size: 1em;
+    color: #555;
+    /* khi di chuộc vào thì các thuộc tính border-color và background-color chuyển từ old sang new trong 0.3s */
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* css khi chuộc vào input tải file */
+.add-photo-form input[type="file"]:hover {
+    /* đổi màu viền sang xanh dương */
+    border-color: #007bff;
+    /* đổi màu nền sang xanh dương rất nhạt */
+    background-color: #f0f8ff;
+}
+
+/* css hình ảnh xem trước */
+.add-photo-form img {
+    /* ảnh chiếm một dòng riêng */
+    display: block; 
+    /* ảnh không bao giờ vượt quá chiều rộng của form chứa nó */
+    max-width: 100%; 
+    /* chiều cao tự điều chỉnh */
+    height: auto;
+    /* khoảng cách 15px phía trên ảnh */
+    margin-top: 15px;
+    /* đường viền dày 1px liền màu #ddd */
+    border: 1px solid #ddd;
+    /* thiết lập bóng, bóng dịch chuyển xuống dưới 2px, làm mờ 4px, màu bóng là đen mờ (5% độ trong suốt) */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* css nút trong form */
+.form-buttons {
+    display: flex;
+    /* căn các nút sang phải theo chiều ngang */
+    justify-content: flex-end; 
+    /* khoảng cách giữa hai nút */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* css button */
+.form-buttons button {
+    padding: 10px 20px;
+    /* ko viền */
+    border: none;
+    /* bo tròn góc bán kính 6px */
+    border-radius: 6px;
+    /* kích thước chữ */
+    font-size: 1em;
+    /* di chuột thành hình bàn tay */
+    cursor: pointer;
+    /* khi di chuộc vào thì các thuộc tính opacity và background-color chuyển từ old sang new trong 0.3s */
+    transition: background-color 0.3s, opacity 0.3s;
+    /* độ đậm của chữ là 600, hơi đậm */
+    font-weight: 600;
+}
+
+/* css nút save */
+.btn-save {
+    /* màu nền xanh lá */
+    background-color: #28a745; 
+    /* màu chữ trắng */
+    color: white;
+}
+/* khi di chuột vào save thì màu nền đổi */
+.btn-save:hover {
+    background-color: #218838;
+}
+
+/* nút cancel */
+.btn-cancel {
+    /* màu nền đỏ */
+    background-color: #dc3545; 
+    /* màu chữ trắng */
+    color: white;
+}
+/* khi di chuột vào thì màu nền đổi */
+.btn-cancel:hover {
+    background-color: #c82333;
+}
+
+
