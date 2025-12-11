@@ -1,0 +1,7 @@
+.home-container{
+  /* div chiếm toàn bộ chiều ngang của màn hình */
+  width: 100vw;
+  margin:0;
+  padding: 0;
+}
+

@@ -1,0 +1,30 @@
+chào thầy, thầy yêu cầu việc viết README để hướng dẫn cách chạy, để chạy web em làm những bước sau đây
+đầu tiên là chạy backend bằng lệnh:
+PS D:\Dev\CSBU103-Assignments\Register_Login_Web\backend> npm run dev
+khi chạy thành công, terminal sẽ hiện:
+PS D:\Dev\CSBU103-Assignments\Register_Login_Web\backend> npm run dev
+> backend@1.0.0 dev
+> nodemon src/server.js
+
+[nodemon] 3.1.11
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node src/server.js`
+[dotenv@17.2.3] injecting env (1) from .env -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+Database connection successful!
+server starts in port 5005
+
+
+tiếp theo là frontend, em để backend và frontend chạy song song nhau
+chạy lệnh: PS D:\Dev\CSBU103-Assignments\Register_Login_Web\frontend> npm run dev
+khi chạy thành công, terminal hiển thị:
+PS D:\Dev\CSBU103-Assignments\Register_Login_Web\frontend> npm run dev
+> frontend@0.0.0 dev
+> vite
+
+  VITE v7.2.6  ready in 236 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help

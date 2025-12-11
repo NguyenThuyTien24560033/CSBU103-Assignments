@@ -1,0 +1,202 @@
+.main-header{
+    width: 100vw;
+    display: flex;
+    /* align-items: center; */  padding: 10px 15px;
+    background-color: white;
+    border-bottom: 1px solid #333;
+    position: fixed;
+    top:0;
+    z-index: 100;
+    flex-direction: column;
+    margin: 10px;
+    padding: clamp(6px, 1vw, 10px) clamp(10px, 2vw, 15px);
+    box-sizing: border-box;
+}
+
+.top-content-header{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(10px, 2vw, 20px);
+    flex-wrap: wrap;
+}
+
+.logo-header{
+    font: 1em;
+    /* Logo chiếm ít không gian hơn so với các thành phần khác */
+    flex-shrink: 0;
+}
+
+.logo-image{
+    display: block;
+    /* max-width: 100%;
+    height: auto; */
+    height: clamp(40px, 6vw, 80px);
+    width: auto;
+}
+
+.main-top-header{
+    display: flex;
+    text-align: left;
+    gap:50px;
+}
+
+.nav-item{
+    font-size: 1.3em;
+    color: #333; 
+    padding: 5px 0;
+    font-weight: bold;
+    gap: clamp(20px, 2vw, 40px);
+}
+
+/* di chuột vào thì đổi màu */
+.nav-item:hover {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+.main-bottom-header{
+    /* Cho phép vùng này chiếm hết không gian còn lại */
+    flex-grow: 1; 
+    display: flex;
+    /* Chuyển hướng sắp xếp từ ngang sang DỌC */
+    flex-direction: column; 
+    /* Căn giữa toàn bộ vùng này */
+    align-items: center;
+    padding-top: clamp(6px, 1vw, 10px);
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    /* width: 400px; 
+    height: 45px; */
+    width: clamp(200px, 40vw, 500px);
+    height: clamp(35px, 5vw, 45px);
+    background-color: #d3d3d3; 
+    border-radius: 25px; 
+    padding: 0 15px;
+    justify-content: left; 
+}
+
+.search-bar input{
+    margin: 5px;
+    padding: 0 10px;
+    font-size: 1.5em;
+    color: #333;
+    width: 100%;
+    border: none;
+    background: none;
+}
+
+
+.user-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.user-btn {
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.user-btn:hover {
+  color: #0078ff;
+}
+
+.user-icon {
+  font-size: 1.4rem;
+}
+
+.arrow {
+  font-size: 0.7rem;
+  margin-left: 2px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  min-width: 120px;
+  z-index: 10;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 8px 12px;
+  text-align: left;
+  color: #333;
+  background: none;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background-color: #f2f2f2;
+}
+
+/* ===== HEADER SEARCH BAR ===== */
+.header-search {
+  position: relative;
+  width: 380px;
+  height: 38px;
+  background: #d8d7d7;        /* màu xám giống hình */
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 35px;          /* chừa chỗ icon */
+  transition: 0.2s ease;
+  margin: 0 auto;
+}
+
+.header-search input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+.header-search input::placeholder {
+  color: #666;
+  opacity: 0.8;
+}
+
+/* icon kính lúp */
+.search-icon {
+  position: absolute;
+  left: 12px;
+  font-size: 16px;
+  color: #5f4e4e;
+}
+
+/* dropdown librarian */
+.header-search select {
+  margin-left: 10px;
+  border: none;
+  background: white;
+  padding: 5px 8px;
+  border-radius: 8px;
+  outline: none;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* hover vào search nhạt sáng hơn tí */
+.header-search:hover {
+  background: #cfcfcf;
+}

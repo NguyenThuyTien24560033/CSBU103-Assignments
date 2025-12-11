@@ -1,0 +1,119 @@
+ /* css chung cho toàn container của login/register form */
+ .login-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+ }
+
+ /* css phần box chứa cách nội dung chính của form */
+.login-box{
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px 60px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+}
+
+/* css nút x */
+.close-x{
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.2s;
+  line-height: 1;
+  padding: 5px;
+}
+
+/* css phần tiêu đề */
+.title {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+/* css phần div chứa 2 nút tab */
+.tab {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: nowrap;
+    background: none;
+}
+
+/* css phần nút của tab */
+.tab button{
+    flex: 1;
+    background: none;
+    border: none;
+    font-weight: 500;
+    padding: 8px 0;
+    cursor: pointer;
+    color: #666;
+}
+
+/* css nút đang được chọn */
+.tabs button.active {
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+/* css phần form */
+.login-form,
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* css phần nhập của form */
+.login-form input,
+.register-form input {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  background: #e6e6e6;
+  font-size: 14px;
+}
+
+/* css nút submit */
+.login-btn {
+  background: #d3d3d3;
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* css nút submit khi di chuột vào */
+.login-btn:hover {
+  background: #c0c0c0;
+}
+
+/* css phần div chứa text hướng dẫn chuyển đổi giữa 2 model */
+.switch-text {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+/* css phần span trong div chứa text hướng dẫn chuyển đổi giữa 2 model */
+.switch-text span {
+  color: #007bff;
+  cursor: pointer;
+}
+
+
+
